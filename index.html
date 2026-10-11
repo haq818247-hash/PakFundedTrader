@@ -1,0 +1,539 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pak Funded Trader | Empowering Traders, Building Futures</title>
+  <meta name="description" content="Pak Funded Trader — instant funding account packages, transparent rules, and trader-focused support. Sample pricing pending client approval.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top" data-page="home">
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="Pak Funded Trader Homepage">
+        <img src="logo.jpg" alt="Pak Funded Trader" class="logo-img">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active" data-nav="home">Home</a></li>
+          <li><a href="instant-funding.html" class="nav-link" data-nav="instant">Instant Funding</a></li>
+          <li><a href="how-it-works.html" class="nav-link" data-nav="how">How It Works</a></li>
+          <li><a href="trading-rules.html" class="nav-link" data-nav="rules">Trading Rules</a></li>
+          <li><a href="about.html" class="nav-link" data-nav="about">About Us</a></li>
+          <li><a href="faq.html" class="nav-link" data-nav="faq">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="cart.html" class="btn btn-outline cart-nav-link">Cart <span class="cart-count" id="cart-count" hidden>0</span></a>
+        <a href="admin.html" class="btn btn-outline">Admin</a>
+        <a href="instant-funding.html" class="btn btn-primary">Get Funded</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>INSTANT FUNDING</span>
+          </div>
+          <h1 class="hero-title">Empowering Traders, <span class="gradient-text">Building Futures</span></h1>
+          <p class="hero-description">
+            Your trusted partner in funded trading. Review instant-funded account packages, compare sample prices and rules, and add packages to your cart — all figures are placeholders pending client approval.
+          </p>
+          <p class="hero-description" style="font-size: 0.95rem; color: var(--text-muted);">Secondary tagline: Your Trusted Partner in Funded Trading</p>
+          <div class="hero-actions">
+            <a href="instant-funding.html" class="btn btn-primary btn-lg">
+              Explore Instant Funding
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="how-it-works.html" class="btn btn-secondary btn-lg">How It Works</a>
+          </div>
+          <div class="hero-disclaimer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <span>Frontend demonstration preview. No guaranteed profits or instant live funding promised.</span>
+          </div>
+        </div>
+
+        <!-- HERO GRAPHIC / SVG CHART -->
+        <div class="hero-visual">
+          <div class="chart-card">
+            <div class="chart-header">
+              <div class="chart-title">
+                <span class="indicator-dot"></span>
+                <span>PAK/USD Binary Performance Analytics (Sample)</span>
+              </div>
+              <div class="chart-badge">Up to 85% Split</div>
+            </div>
+            
+            <div class="chart-container">
+              <svg class="chart-svg" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#10B981" stop-opacity="0.0"/>
+                  </linearGradient>
+                  <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#3B82F6"/>
+                    <stop offset="50%" stop-color="#10B981"/>
+                    <stop offset="100%" stop-color="#34D399"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Grid lines -->
+                <line x1="0" y1="40" x2="500" y2="40" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+                <line x1="0" y1="90" x2="500" y2="90" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+                <line x1="0" y1="140" x2="500" y2="140" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+                <line x1="0" y1="190" x2="500" y2="190" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+
+                <!-- Fill Area -->
+                <path d="M 20 180 Q 80 160 140 120 T 260 110 T 360 60 T 480 40 L 480 220 L 20 220 Z" fill="url(#chartGradient)"/>
+
+                <!-- Main Line -->
+                <path class="animated-path" d="M 20 180 Q 80 160 140 120 T 260 110 T 360 60 T 480 40" stroke="url(#lineGradient)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+                <!-- Pulsing Nodes -->
+                <circle cx="140" cy="120" r="5" fill="#3B82F6" />
+                <circle cx="260" cy="110" r="5" fill="#10B981" />
+                <circle cx="360" cy="60" r="5" fill="#10B981" />
+                
+                <g class="pulse-point">
+                  <circle cx="480" cy="40" r="8" fill="#10B981" fill-opacity="0.4">
+                    <animate attributeName="r" values="6;12;6" dur="2s" repeatCount="indefinite" />
+                    <animate attributeName="fill-opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite" />
+                  </circle>
+                  <circle cx="480" cy="40" r="5" fill="#34D399" />
+                </g>
+              </svg>
+            </div>
+
+            <div class="chart-stats">
+              <div class="stat-item">
+                <span class="stat-label">Profit Split Share</span>
+                <span class="stat-value text-emerald">80% - 85%</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Daily Loss Limit</span>
+                <span class="stat-value text-muted">5.0% Max</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Max Drawdown</span>
+                <span class="stat-value">10.0% Max</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST & FEATURES SECTION -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Why Traders Choose Pak Funded Trader</h2>
+          <p class="section-subtitle">Instant funding options, transparent rules, accessible package information, and support via official contact channels.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>Transparent Rules</h3>
+            <p>Clear, straightforward rules with no hidden restrictions or unexpected parameters. Track your daily drawdowns effortlessly.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Instant Funding Packages</h3>
+            <p>Browse active account packages with balance, pricing, and rule summaries subject to applicable terms.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Platform Preferences</h3>
+            <p>Select a supported platform preference at checkout. External integrations remain not connected until authorized on the backend.</p>
+          </div>
+
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <h3>Trader Support</h3>
+            <p>Responsive client support ready to assist with account questions, rule clarifications, and platform navigation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PACKAGES -->
+    <section class="section challenges-section" id="featured-packages">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Featured Account Packages</h2>
+          <p class="section-subtitle">Highlighted tiers from shared account data — buy now or add to cart.</p>
+        </div>
+        <div class="challenges-grid" id="featured-packages-container"></div>
+        <p class="text-center" style="margin-top: 1rem;"><a href="instant-funding.html" class="text-emerald">View all packages →</a></p>
+      </div>
+    </section>
+
+    <!-- INSTANT FUNDING PREVIEW SECTION (AUTOMATICALLY POPULATED FROM ACCOUNTS.JS) -->
+    <section class="section challenges-section" id="challenges">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge badge-warning">SAMPLE PRICES — PENDING CLIENT APPROVAL</div>
+          <h2 class="section-title">Instant Binary Options Packages</h2>
+          <p class="section-subtitle">Choose an account tier to review profit splits, fee structures, and simulated balance specs.</p>
+        </div>
+
+        <!-- Tier Selector Controls -->
+        <div class="tier-selector" id="tier-selector" role="tablist" aria-label="Account size filter">
+          <button class="tier-btn active" role="tab" aria-selected="true" data-size="all">All Sizes</button>
+          <button class="tier-btn" role="tab" aria-selected="false" data-size="5000">$5,000</button>
+          <button class="tier-btn" role="tab" aria-selected="false" data-size="10000">$10,000</button>
+          <button class="tier-btn" role="tab" aria-selected="false" data-size="25000">$25,000</button>
+        </div>
+
+        <!-- Dynamic Challenge Grid Container (Populated automatically from accounts.js) -->
+        <div class="challenges-grid" id="challenge-cards-container">
+          <!-- Populated dynamically by script.js using accounts.js -->
+        </div>
+
+        <div class="sample-notice text-center">
+          <p>⚠️ All account values, fees, and rules presented above are <strong>sample placeholder parameters</strong> pending client approval.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="section how-it-works-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Browse packages, review your order, complete payment when configured, await verification, then receive provisioning instructions.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Browse Packages</h3>
+              <p>Compare instant funding balances, sample prices, and rules on the Instant Funding page.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Read Risk Rules</h3>
+              <p>Familiarize yourself with profit split allocations, daily drawdown limits, and maximum loss limits.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Cart or Buy Now</h3>
+              <p>Add packages to your cart or go directly to checkout review.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-content">
+              <h3>Payment &amp; Provisioning</h3>
+              <p>Complete supported payment after verification; receive account instructions per actual service capabilities — not automatic external account creation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box text-center">
+          <p><strong>Note:</strong> Actual account access, allocation, and profit split terms depend on final company agreements and eligibility verification.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRADING RULES PREVIEW -->
+    <section class="section rules-section" id="rules">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="badge badge-warning">SAMPLE RULES — PENDING CLIENT APPROVAL</div>
+          <h2 class="section-title">Core Binary Risk Objectives</h2>
+          <p class="section-subtitle">Risk guidelines designed to promote long-term capital preservation.</p>
+        </div>
+
+        <div class="rules-grid">
+          <div class="card rule-card">
+            <div class="rule-badge">Objective 1</div>
+            <h3>Profit Split Share</h3>
+            <div class="rule-value text-emerald">80% - 85%</div>
+            <p>Earn up to 80% to 85% of net profits generated on simulated binary options accounts.</p>
+          </div>
+
+          <div class="card rule-card">
+            <div class="rule-badge">Objective 2</div>
+            <h3>Daily Loss Limit</h3>
+            <div class="rule-value text-amber">5% Max</div>
+            <p>Your equity or balance must not drop below 5% of the starting daily balance at any point during a trading day.</p>
+          </div>
+
+          <div class="card rule-card">
+            <div class="rule-badge">Objective 3</div>
+            <h3>Maximum Drawdown</h3>
+            <div class="rule-value text-rose">10% Max</div>
+            <p>Overall account equity must never drop 10% below the initial starting balance.</p>
+          </div>
+
+          <div class="card rule-card">
+            <div class="rule-badge">Objective 4</div>
+            <h3>Payout Schedule</h3>
+            <div class="rule-value text-blue">Bi-Weekly</div>
+            <p>Eligible traders can request profit split distributions bi-weekly according to terms.</p>
+          </div>
+        </div>
+
+        <div class="rules-disclaimer text-center">
+          <p>* All values listed above represent sample demonstration rules requiring official client confirmation prior to live deployment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why-us-section" id="why-us">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Why Partner With Pak Funded Trader</h2>
+          <p class="section-subtitle">A trader-focused environment built for clarity, consistency, and professional growth.</p>
+        </div>
+
+        <div class="why-us-grid">
+          <div class="card why-card">
+            <div class="why-number">01</div>
+            <h3>Direct Account Access</h3>
+            <p>Explore instant funding accounts without waiting through multi-stage challenge evaluations.</p>
+          </div>
+
+          <div class="card why-card">
+            <div class="why-number">02</div>
+            <h3>Transparent Guidelines</h3>
+            <p>Simple objective definitions without convoluted terms, hidden commission traps, or confusing trading restrictions.</p>
+          </div>
+
+          <div class="card why-card">
+            <div class="why-number">03</div>
+            <h3>Risk-Managed Environment</h3>
+            <p>Simulated trading infrastructure that mirrors market dynamics while encouraging responsible risk sizing.</p>
+          </div>
+
+          <div class="card why-card">
+            <div class="why-number">04</div>
+            <h3>Trader-Centric Support</h3>
+            <p>Our dedicated team is committed to answering technical queries and providing responsive assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Find quick answers to common questions about our sample instant binary funding program.</p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+              <span>What is Pak Funded Trader?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+              <div class="faq-body">
+                Pak Funded Trader is a modern instant binary funding platform concept designed to provide traders with structured simulated accounts and clear risk management parameters.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+              <span>How does instant binary funding work?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+              <div class="faq-body">
+                Traders choose a sample account size ($5,000, $10,000, or $25,000) and trade on a simulated platform while staying within daily and maximum drawdown limits to earn profit splits.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+              <span>What are the drawdown rules?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+              <div class="faq-body">
+                The sample rules specify a 5% Maximum Daily Loss limit calculated from starting daily balance, and a 10% Maximum Total Drawdown limit calculated from initial starting balance.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+              <span>Are these real live funded accounts?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+              <div class="faq-body">
+                No. All accounts shown on this frontend preview are simulated sample accounts. Actual funding, contract agreements, and live account allocations are subject to final company approval and legal verification.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+              <span>How can I get support regarding instant binary funding?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden>
+              <div class="faq-body">
+                Email <a href="mailto:khangkhan.2636738@gmail.com">khangkhan.2636738@gmail.com</a> or WhatsApp <a href="https://wa.me/923484073631">+92 348 4073631</a>. See the <a href="contact.html">Contact</a> page for payment methods.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="section cta-section" id="cta">
+      <div class="container">
+        <div class="card cta-card text-center">
+          <div class="cta-glow"></div>
+          <h2 class="cta-title">Ready to Explore Your Trading Potential?</h2>
+          <p class="cta-description">Take the first step in demonstrating your market strategy and disciplined risk management.</p>
+          <div class="cta-actions">
+            <a href="instant-funding.html" class="btn btn-primary btn-lg">Explore Instant Funding</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+          </div>
+          <p style="margin-top: 1rem; color: var(--text-muted);">Pak Funded Trader — Your Trading Goals, Our Commitment.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Pak Funded Trader Homepage">
+            <img src="logo.jpg" alt="Pak Funded Trader" class="logo-img logo-img-footer">
+          </a>
+          <p class="footer-tagline">Empowering Traders, Building Futures — Your Trusted Partner in Funded Trading.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="instant-funding.html">Instant Funding</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#payment-methods">Payment Methods</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="trading-rules.html">Trading Rules</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Legal & Policies</h4>
+          <ul>
+            <li><a href="#" class="js-modal-trigger" data-action="terms">Terms & Conditions</a></li>
+            <li><a href="#" class="js-modal-trigger" data-action="privacy">Privacy Policy</a></li>
+            <li><a href="#" class="js-modal-trigger" data-action="risk">Risk Disclosure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact & Support</h4>
+          <ul>
+            <li class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:khangkhan.2636738@gmail.com">khangkhan.2636738@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="https://wa.me/923484073631">+92 348 4073631</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-risk">
+        <p>Trading involves risk and may not be suitable for everyone. Account availability, trading permissions, account restrictions, and payout eligibility are subject to the applicable terms. Review the relevant terms and risks before purchasing a package. Website packages are product listings; live trading accounts on external platforms require verified payment and authorized provisioning workflows.</p>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Pak Funded Trader. All rights reserved. Designed for sample evaluation preview.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL CONTAINER -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      </div>
+      <h3 id="modal-title" class="modal-title">Frontend Preview Mode</h3>
+      <div id="modal-body" class="modal-body">
+        <p>This button interaction demonstrates the user interface flow for Pak Funded Trader. Backend authentication, account creation, and payment processing are disabled in this frontend-only build.</p>
+      </div>
+      <button class="btn btn-primary btn-block" id="modal-ok-btn">Got It</button>
+    </div>
+  </div>
+
+  <!-- Centralized Configuration & Main Script -->
+  <script src="accounts.js"></script>
+  <script src="platforms.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

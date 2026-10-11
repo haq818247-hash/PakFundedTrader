@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Rules | Pak Funded Trader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="rules">
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo"><img src="logo.jpg" alt="Pak Funded Trader" class="logo-img"></a>
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+          <li><a href="instant-funding.html" class="nav-link" data-nav="instant">Instant Funding</a></li>
+          <li><a href="how-it-works.html" class="nav-link" data-nav="how">How It Works</a></li>
+          <li><a href="trading-rules.html" class="nav-link active" data-nav="rules">Trading Rules</a></li>
+          <li><a href="about.html" class="nav-link" data-nav="about">About Us</a></li>
+          <li><a href="faq.html" class="nav-link" data-nav="faq">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="cart.html" class="btn btn-outline cart-nav-link">Cart <span class="cart-count" id="cart-count" hidden>0</span></a>
+        <a href="admin.html" class="btn btn-outline">Admin</a>
+        <button class="hamburger" id="hamburger-btn"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <h1>Trading Rules</h1>
+        <p class="section-subtitle">Package-specific rules are loaded from shared account data. General policies below include placeholders pending client approval.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="badge badge-warning">SAMPLE RULES — PENDING CLIENT APPROVAL</div>
+        <div id="package-rules-container" class="challenges-grid" style="margin-top: 1.5rem;"></div>
+        <div class="rules-grid" style="margin-top: 2.5rem;">
+          <div class="card rule-card"><h3>Account Restrictions</h3><p><em>[Placeholder]</em> Trading restrictions, news trading, and instrument limits to be confirmed by the client.</p></div>
+          <div class="card rule-card"><h3>Payout Eligibility</h3><p>Payout timing follows each package’s payout terms after payment verification and provisioning.</p></div>
+          <div class="card rule-card"><h3>Verification</h3><p>Identity or payment verification steps will be defined in production backend workflows.</p></div>
+          <div class="card rule-card"><h3>Risk Limits</h3><p>Daily loss and maximum drawdown values are shown per package above.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-risk"><p>Trading involves risk and may not be suitable for everyone. Review applicable terms before purchasing.</p></div></div></footer>
+  <script src="accounts.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="script.js"></script>
+  <script src="trading-rules.js"></script>
+</body>
+</html>

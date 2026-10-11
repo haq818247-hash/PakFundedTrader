@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Payment Methods | Pak Funded Trader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top" data-page="contact">
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo"><img src="logo.jpg" alt="Pak Funded Trader" class="logo-img"></a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+          <li><a href="instant-funding.html" class="nav-link" data-nav="instant">Instant Funding</a></li>
+          <li><a href="how-it-works.html" class="nav-link" data-nav="how">How It Works</a></li>
+          <li><a href="trading-rules.html" class="nav-link" data-nav="rules">Trading Rules</a></li>
+          <li><a href="about.html" class="nav-link" data-nav="about">About Us</a></li>
+          <li><a href="faq.html" class="nav-link" data-nav="faq">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link active" data-nav="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="cart.html" class="btn btn-outline cart-nav-link">Cart <span class="cart-count" id="cart-count" hidden>0</span></a>
+        <a href="admin.html" class="btn btn-outline">Admin</a>
+        <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <div class="container">
+        <h1>Contact Pak Funded Trader</h1>
+        <p class="section-subtitle">Have a question about our account packages, payments, or services? Contact Pak Funded Trader for assistance.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="card feature-card">
+            <h3>Email</h3>
+            <p><a href="mailto:khangkhan.2636738@gmail.com" id="contact-email">khangkhan.2636738@gmail.com</a></p>
+            <div class="contact-actions">
+              <a href="mailto:khangkhan.2636738@gmail.com" class="btn btn-primary btn-sm">Send Email</a>
+              <button type="button" class="btn btn-outline btn-sm" data-copy="khangkhan.2636738@gmail.com" data-copy-feedback="copy-email-feedback">Copy Email</button>
+            </div>
+            <span id="copy-email-feedback" class="copy-feedback" hidden aria-live="polite">Copied!</span>
+          </div>
+          <div class="card feature-card">
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/923484073631" target="_blank" rel="noopener noreferrer">+92 348 4073631</a></p>
+            <div class="contact-actions">
+              <a href="https://wa.me/923484073631" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+              <button type="button" class="btn btn-outline btn-sm" data-copy="+923484073631" data-copy-feedback="copy-wa-feedback">Copy Number</button>
+            </div>
+            <span id="copy-wa-feedback" class="copy-feedback" hidden aria-live="polite">Copied!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="payment-methods">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Payment Methods</h2>
+          <p class="section-subtitle">Confirm amount, recipient, and package with Pak Funded Trader before sending payment.</p>
+        </div>
+        <div class="payment-card-grid">
+          <div class="card payment-card">
+            <h3>EASYPAISA</h3>
+            <p>Account Number: <strong id="easypaisa-num">03499279098</strong></p>
+            <p>Account Name: Aleem Ullah Khan</p>
+            <button type="button" class="btn btn-outline btn-sm" data-copy="03499279098" data-copy-feedback="copy-ep-feedback">Copy Account Number</button>
+            <span id="copy-ep-feedback" class="copy-feedback" hidden aria-live="polite"></span>
+          </div>
+          <div class="card payment-card">
+            <h3>JAZZCASH</h3>
+            <p>Account Number: <strong id="jazzcash-num">03228284451</strong></p>
+            <p>Account Name: Aleem Ullah Khan</p>
+            <button type="button" class="btn btn-outline btn-sm" data-copy="03228284451" data-copy-feedback="copy-jc-feedback">Copy Account Number</button>
+            <span id="copy-jc-feedback" class="copy-feedback" hidden aria-live="polite"></span>
+          </div>
+          <div class="card payment-card">
+            <h3>BINANCE</h3>
+            <p>Binance ID: <strong id="binance-id">1231185157</strong></p>
+            <p class="text-muted" style="font-size: 0.85rem;">Purpose and supported payment method to be confirmed by the client.</p>
+            <button type="button" class="btn btn-outline btn-sm" data-copy="1231185157" data-copy-feedback="copy-bn-feedback">Copy Binance ID</button>
+            <span id="copy-bn-feedback" class="copy-feedback" hidden aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="info-box" style="margin-top: 2rem;">
+          <p><strong>Payment safety notice:</strong> Before making a payment, confirm the amount, payment recipient, and account package with Pak Funded Trader through the official contact details. Keep your payment receipt. Never share passwords, verification codes, or private keys.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-risk">
+        <p>Trading involves risk and may not be suitable for everyone. Account availability, trading permissions, account restrictions, and payout eligibility are subject to the applicable terms.</p>
+      </div>
+      <div class="footer-bottom text-center"><p>&copy; 2026 Pak Funded Trader</p></div>
+    </div>
+  </footer>
+  <script src="accounts.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

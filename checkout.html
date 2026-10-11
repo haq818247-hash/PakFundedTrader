@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Review | Pak Funded Trader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="checkout">
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo"><img src="logo.jpg" alt="Pak Funded Trader" class="logo-img"></a>
+      <div class="nav-actions">
+        <a href="cart.html" class="btn btn-outline">Back to Cart</a>
+      </div>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h1>Checkout Review</h1>
+      <p class="text-muted">This is a frontend demonstration. No payment is processed here. Production checkout requires a secure backend and verified payment workflow.</p>
+
+      <div id="checkout-empty" class="empty-state" hidden>
+        <h3>No valid packages to review</h3>
+        <a href="instant-funding.html" class="btn btn-primary">Browse Packages</a>
+      </div>
+
+      <div id="checkout-panel" class="card" style="padding: 1.5rem; margin-top: 1.5rem;" hidden>
+        <p>Order reference (local demo): <strong id="order-reference-display"></strong></p>
+        <input type="hidden" id="order-reference">
+        <table class="checkout-table" aria-label="Order lines">
+          <thead><tr><th>Package</th><th>Qty</th><th>Unit Price</th><th>Line Total</th></tr></thead>
+          <tbody id="checkout-lines"></tbody>
+        </table>
+        <p><strong>Subtotal:</strong> <span id="checkout-subtotal">$0.00</span></p>
+
+        <form id="checkout-form" style="margin-top: 1.5rem;">
+          <div class="form-group">
+            <label class="form-label" for="checkout-name">Full Name</label>
+            <input class="admin-input" id="checkout-name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="checkout-email">Email</label>
+            <input class="admin-input" type="email" id="checkout-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="checkout-platform">Preferred Trading Platform</label>
+            <select class="admin-input admin-select" id="checkout-platform" name="platform"></select>
+            <p class="text-muted" style="font-size: 0.82rem; margin-top: 0.35rem;">Platform selection records preference only. External accounts are not created automatically.</p>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-group">
+              <input type="checkbox" id="checkout-terms" required>
+              <span>I understand that trading involves risk, package terms apply, and payment must be verified before any account provisioning.</span>
+            </label>
+          </div>
+          <p class="text-muted" style="font-size: 0.88rem;">After submission, follow manual payment instructions on the <a href="contact.html#payment-methods" class="text-emerald">Payment Methods</a> page and contact Pak Funded Trader with your order reference and receipt. Receipt upload requires a secure backend.</p>
+          <button type="submit" class="btn btn-primary" id="checkout-submit-btn">Submit Order Review (Demo)</button>
+          <div id="checkout-result" class="checkout-result checkout-result-info" hidden role="status"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="accounts.js"></script>
+  <script src="platforms.js"></script>
+  <script src="cart.js"></script>
+  <script src="checkout.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const ref = document.getElementById("order-reference");
+      const disp = document.getElementById("order-reference-display");
+      if (ref && disp) disp.textContent = ref.value;
+    });
+  </script>
+</body>
+</html>

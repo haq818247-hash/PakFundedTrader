@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pak Funded Trader | Admin Dashboard - Account Management</title>
+  <meta name="description" content="Admin Dashboard for managing Instant Funding account packages, pricing, rules, and status.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body id="top" data-page="admin">
+
+  <!-- HEADER / NAVBAR -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" aria-label="Pak Funded Trader Homepage">
+        <img src="logo.jpg" alt="Pak Funded Trader" class="logo-img">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+          <li><a href="instant-funding.html" class="nav-link" data-nav="instant">Instant Funding</a></li>
+          <li><a href="how-it-works.html" class="nav-link" data-nav="how">How It Works</a></li>
+          <li><a href="trading-rules.html" class="nav-link" data-nav="rules">Trading Rules</a></li>
+          <li><a href="about.html" class="nav-link" data-nav="about">About Us</a></li>
+          <li><a href="faq.html" class="nav-link" data-nav="faq">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+          <li><a href="admin.html" class="nav-link active" data-nav="admin">Admin</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="cart.html" class="btn btn-outline cart-nav-link">Cart <span class="cart-count" id="cart-count" hidden>0</span></a>
+        <a href="instant-funding.html" class="btn btn-outline">View Public Site</a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="container">
+      
+      <!-- Top Title Group -->
+      <div class="admin-header-bar">
+        <div class="admin-title-group">
+          <div class="badge" style="margin-bottom: 0.5rem;">
+            <span class="badge-dot"></span>
+            <span>ADMINISTRATOR CONTROL PANEL</span>
+          </div>
+          <h1>Account Package Management</h1>
+          <p>Create, edit, activate, deactivate, and configure instant binary options funding packages in real-time.</p>
+        </div>
+      </div>
+
+      <!-- LocalStorage Notice Banner -->
+      <div class="notice-banner">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <strong>Frontend Demonstration Mode:</strong> Changes are saved in <strong>localStorage</strong> only — not a secure production database, not synchronized across devices, and not protected by real administrator authentication. Package updates appear on public pages in this browser after refresh.
+        </div>
+      </div>
+
+      <!-- Stat Metrics Overview Cards -->
+      <div class="admin-stats-grid">
+        <div class="stat-card">
+          <span class="stat-title">Total Packages</span>
+          <span class="stat-number" id="stat-total">3</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Active Tiers</span>
+          <span class="stat-number text-emerald" id="stat-active">3</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Featured Tier</span>
+          <span class="stat-number text-amber" id="stat-featured">1</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Avg Profit Split</span>
+          <span class="stat-number text-blue" id="stat-split">82% Share</span>
+        </div>
+      </div>
+
+      <!-- Action Control Bar -->
+      <div class="control-bar">
+        <div class="search-filter-group">
+          <input type="text" class="admin-input" id="search-input" placeholder="Search by name, balance, price..." style="min-width: 260px;">
+          <select class="admin-input admin-select" id="status-filter">
+            <option value="all">All Statuses</option>
+            <option value="active">Active Only</option>
+            <option value="inactive">Inactive Only</option>
+          </select>
+        </div>
+        <div class="admin-actions-group">
+          <button class="btn btn-secondary" id="reset-defaults-btn" title="Reset packages to original sample dataset">Reset Defaults</button>
+          <button class="btn btn-primary" id="add-account-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add New Account
+          </button>
+        </div>
+      </div>
+
+      <!-- Accounts Management Table Card -->
+      <div class="admin-table-card">
+        <div style="overflow-x: auto;">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Account Package</th>
+                <th>Balance</th>
+                <th>Sample Price</th>
+                <th>Profit Split</th>
+                <th>Status</th>
+                <th>Daily Loss Limit</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="accounts-table-body">
+              <!-- Populated dynamically by admin.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="admin-table-card" style="margin-top: 2rem;">
+        <h2 style="margin-bottom: 0.5rem;">Trading Platform Integration Status</h2>
+        <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 1rem;">Platforms are configuration-only until authorized official integrations are connected on the backend. Customer platform selection records order preference — not live account creation.</p>
+        <div style="overflow-x: auto;">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Integration Status</th>
+                <th>Customer Selectable</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="platforms-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sample-notice text-center" style="margin-top: 1.5rem;">
+        <p>⚠️ <strong>Disclaimer:</strong> All prices, drawdown thresholds, and profit splits configured here represent <strong>sample data pending client approval</strong>.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ADD / EDIT ACCOUNT MODAL -->
+  <div class="modal-overlay" id="account-form-modal" hidden>
+    <div class="modal-card modal-large" role="dialog" aria-modal="true" aria-labelledby="form-modal-title">
+      <button class="modal-close" id="form-modal-close" aria-label="Close dialog">&times;</button>
+      
+      <h3 id="form-modal-title" class="modal-title" style="text-align: left;">Add New Account Package</h3>
+      <p style="text-align: left; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        Configure the package balance, sample price, profit split, and risk limits below.
+      </p>
+
+      <form id="account-form">
+        <input type="hidden" id="field-id">
+
+        <div class="form-grid">
+          <!-- Name -->
+          <div class="form-group">
+            <label class="form-label" for="field-name">Account Name *</label>
+            <input type="text" id="field-name" class="admin-input" placeholder="e.g. Master Binary Account" required>
+          </div>
+
+          <!-- Balance -->
+          <div class="form-group">
+            <label class="form-label" for="field-balance">Account Balance *</label>
+            <input type="text" id="field-balance" class="admin-input" placeholder="e.g. $50,000" required>
+          </div>
+
+          <!-- Price -->
+          <div class="form-group">
+            <label class="form-label" for="field-price">Sample Price *</label>
+            <input type="text" id="field-price" class="admin-input" placeholder="e.g. $299" required>
+          </div>
+
+          <!-- Currency -->
+          <div class="form-group">
+            <label class="form-label" for="field-currency">Currency *</label>
+            <select id="field-currency" class="admin-input admin-select" required>
+              <option value="USD">USD</option>
+              <option value="PKR">PKR</option>
+            </select>
+          </div>
+
+          <!-- Profit Split -->
+          <div class="form-group">
+            <label class="form-label" for="field-profit-split">Profit Split Percentage *</label>
+            <input type="text" id="field-profit-split" class="admin-input" placeholder="e.g. 85%" required>
+          </div>
+
+          <!-- Daily Loss -->
+          <div class="form-group">
+            <label class="form-label" for="field-daily-loss">Daily Loss Limit *</label>
+            <input type="text" id="field-daily-loss" class="admin-input" placeholder="e.g. $2,500 (5%)" required>
+          </div>
+
+          <!-- Max Drawdown -->
+          <div class="form-group">
+            <label class="form-label" for="field-max-drawdown">Maximum Drawdown *</label>
+            <input type="text" id="field-max-drawdown" class="admin-input" placeholder="e.g. $5,000 (10%)" required>
+          </div>
+
+          <!-- Payout Terms -->
+          <div class="form-group">
+            <label class="form-label" for="field-payout-terms">Payout Terms</label>
+            <input type="text" id="field-payout-terms" class="admin-input" placeholder="e.g. Bi-Weekly Distribution">
+          </div>
+
+          <!-- Status -->
+          <div class="form-group">
+            <label class="form-label" for="field-status">Account Status</label>
+            <select id="field-status" class="admin-input admin-select">
+              <option value="active">Active (Visible on Site)</option>
+              <option value="inactive">Inactive (Hidden)</option>
+            </select>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group full-width">
+            <label class="form-label" for="field-description">Account Description</label>
+            <textarea id="field-description" class="admin-input" rows="3" placeholder="Brief description of the binary options account tier..."></textarea>
+          </div>
+
+          <!-- Supported platforms -->
+          <div class="form-group full-width">
+            <label class="form-label">Supported Platforms (display only — integrations not connected) *</label>
+            <div id="field-platforms-wrap" class="platform-check-grid"></div>
+          </div>
+
+          <!-- Featured Checkbox -->
+          <div class="form-group full-width">
+            <label class="checkbox-group">
+              <input type="checkbox" id="field-featured">
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-white);">Mark as Featured Package (shown in homepage featured section)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="form-modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="form-modal-save">Save Package</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- DELETE CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="delete-confirm-modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="delete-modal-title">
+      <button class="modal-close" id="delete-modal-close" aria-label="Close dialog">&times;</button>
+      <div class="modal-icon" style="background: rgba(244, 63, 94, 0.1);">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F43F5E" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      </div>
+      <h3 id="delete-modal-title" class="modal-title">Delete Account Package?</h3>
+      <div class="modal-body">
+        <p>Are you sure you want to delete <strong id="delete-account-name" class="text-white">this package</strong>?</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;" class="text-muted">This action will remove the package from browser localStorage.</p>
+      </div>
+      <div style="display: flex; gap: 0.75rem;">
+        <button class="btn btn-outline btn-block" id="delete-modal-cancel">Cancel</button>
+        <button class="btn btn-block" id="delete-modal-confirm" style="background: var(--rose-danger); color: white; font-weight: 700;">Delete Package</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Pak Funded Trader Homepage">
+            <img src="logo.jpg" alt="Pak Funded Trader" class="logo-img logo-img-footer">
+          </a>
+          <p class="footer-tagline">Providing modern instant funding account previews for binary options trading and structured risk management frameworks.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="instant-funding.html">Instant Funding</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="admin.html">Admin Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Legal & Policies</h4>
+          <ul>
+            <li><a href="#" class="js-modal-trigger" data-action="terms">Terms & Conditions</a></li>
+            <li><a href="#" class="js-modal-trigger" data-action="privacy">Privacy Policy</a></li>
+            <li><a href="#" class="js-modal-trigger" data-action="risk">Risk Disclosure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact & Support</h4>
+          <ul>
+            <li class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>support@pakfundedtrader.com</span>
+            </li>
+            <li class="contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Support Hours: 24/5 Mon - Fri</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-risk">
+        <p><strong>Risk Warning:</strong> Trading binary options contracts involves substantial risk of loss and is not suitable for all investors. All accounts offered on this website are simulated evaluation accounts with hypothetical performance data. Pak Funded Trader does not act as a broker, custodian, or financial advisor. No real trading services or financial guarantees are rendered on this sample frontend website.</p>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Pak Funded Trader. All rights reserved. Administrator Control Panel.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Centralized Configuration & Admin Scripts -->
+  <script src="accounts.js"></script>
+  <script src="platforms.js"></script>
+  <script src="cart.js"></script>
+  <script src="layout.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
+
+
